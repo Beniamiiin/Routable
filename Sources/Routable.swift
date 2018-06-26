@@ -39,3 +39,7 @@ public protocol Routable {
     func present<T>(fromStoryboard name: String, withIdentifier identifier: String, _ type: T.Type, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, configuration: @escaping (_ moduleInput: T) -> ())
     
 }
+
+extension UIViewController: Routable {
+    
+}
