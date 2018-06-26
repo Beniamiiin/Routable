@@ -8,11 +8,11 @@
 
 extension Routable where Self: UIViewController {
     
-    fileprivate func show(fromStoryboard name: String, withIdentifier identifier: String?, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil) {
+    internal func show(fromStoryboard name: String, withIdentifier identifier: String?, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil) {
         _ = _show(fromStoryboard: name, withIdentifier: identifier, transitionType: transitionType, presentationStyle: presentationStyle, transitionStyle: transitionStyle)
     }
     
-    fileprivate func _show(in view: UIView? = nil, fromStoryboard name: String, withIdentifier identifier: String?, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil) -> UIViewController {
+    internal func _show(in view: UIView? = nil, fromStoryboard name: String, withIdentifier identifier: String?, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil) -> UIViewController {
         let viewController = controller(fromStoryboard: name, withIdentifier: identifier, presentationStyle: presentationStyle, transitionStyle: transitionStyle)
         
         show(in: view, controller: viewController, transitionType: transitionType)
@@ -20,11 +20,11 @@ extension Routable where Self: UIViewController {
         return viewController
     }
     
-    fileprivate func show<T>(fromStoryboard name: String, withIdentifier identifier: String?, _ type: T.Type, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil, configuration: @escaping (_ moduleInput: T) -> ()) {
+    internal func show<T>(fromStoryboard name: String, withIdentifier identifier: String?, _ type: T.Type, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil, configuration: @escaping (_ moduleInput: T) -> ()) {
         _ = _show(fromStoryboard: name, withIdentifier: identifier, type, transitionType: transitionType, presentationStyle: presentationStyle, transitionStyle: transitionStyle, configuration: configuration)
     }
     
-    fileprivate func _show<T>(in view: UIView? = nil, fromStoryboard name: String, withIdentifier identifier: String?, _ type: T.Type, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil, configuration: @escaping (_ moduleInput: T) -> ()) -> UIViewController {
+    internal func _show<T>(in view: UIView? = nil, fromStoryboard name: String, withIdentifier identifier: String?, _ type: T.Type, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil, configuration: @escaping (_ moduleInput: T) -> ()) -> UIViewController {
         let viewController = controller(fromStoryboard: name, withIdentifier: identifier, presentationStyle: presentationStyle, transitionStyle: transitionStyle)
         
         if let moduleInput = viewController as? T {
@@ -38,7 +38,7 @@ extension Routable where Self: UIViewController {
         return viewController
     }
     
-    fileprivate func controller(fromStoryboard name: String, withIdentifier identifier: String? = nil, presentationStyle: UIModalPresentationStyle?, transitionStyle: UIModalTransitionStyle?) -> UIViewController {
+    internal func controller(fromStoryboard name: String, withIdentifier identifier: String? = nil, presentationStyle: UIModalPresentationStyle?, transitionStyle: UIModalTransitionStyle?) -> UIViewController {
         let storyboard = UIStoryboard(name: name, bundle: nil)
         
         let controller: UIViewController?
@@ -64,7 +64,7 @@ extension Routable where Self: UIViewController {
         return viewController
     }
     
-    fileprivate func show(in view: UIView? = nil, controller: UIViewController, transitionType: TransitionType) {
+    internal func show(in view: UIView? = nil, controller: UIViewController, transitionType: TransitionType) {
         switch transitionType {
         case .add:
             let containerView = view ?? self.view

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "Swift Lightweight Router"
   s.homepage         = "https://github.com/Beniamiiin/Routable"
-  s.license          = { :type => "MIT", :file => "LICENSE.md" }
+  s.license          = { :type => "MIT", :file => "LICENSE" }
   s.author           = { "Beniamin Sarkisyan" => "beniamin.sarkisyan@gmail.com" }
   s.requires_arc     = true
   s.source           = { :git => "https://github.com/Beniamiiin/Routable.git", :tag => s.version.to_s }
