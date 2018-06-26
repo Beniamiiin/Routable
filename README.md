@@ -14,7 +14,7 @@ pod 'Routable',  :git => 'https://github.com/Beniamiiin/Routable.git'
 add(fromStoryboard: "StoryboardName")
 ```
 
-This method for adding an initial view controller of storyboard as a child view controller.
+This method for adding an initial view controller of a storyboard as a child view controller.
 
 ```
 add(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifier")
@@ -26,7 +26,7 @@ This method for adding a view controller with passed identifier as a child view 
 add(in: containerView, fromStoryboard: "StoryboardName")
 ```
 
-This method for adding an initial view controller of storyboard as a child view controller but in `containerView` instead of `parent.view`.
+This method for adding an initial view controller of a storyboard as a child view controller but in `containerView` instead of `parent.view`.
 
 ```
 add(in: containerView, fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifier")
@@ -60,7 +60,7 @@ add(in: containerView, fromStoryboard: "StoryboardName", withIdentifier: "Contro
 show(fromStoryboard: "StoryboardName")
 ```
 
-This method for pushing an initial view controller of storyboard.
+This method for pushing an initial view controller of a storyboard.
 
 ```
 show(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifier")
@@ -86,13 +86,13 @@ show(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifie
 present(fromStoryboard: "StoryboardName")
 ```
 
-This method for presenting an initial view controller of storyboard.
+This method for presenting an initial view controller of a storyboard.
 
 ```
 present(fromStoryboard: "StoryboardName", presentationStyle: .currentContext, transitionStyle: .crossDissolve)
 ```
 
-This method for presenting an initial view controller of storyboard and with custom `presentationStyle` and `transitionStyle`.
+This method for presenting an initial view controller of a storyboard and with custom `presentationStyle` and `transitionStyle`.
 
 ```
 present(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifier")
