@@ -8,7 +8,7 @@ pod 'Routable',  :git => 'https://github.com/Beniamiiin/Routable.git'
 
 ### How to use
 
-##### You can add a controller as a child view controller.
+#### You can add a controller as a child view controller.
 
 ```
 add(fromStoryboard: "StoryboardName")
@@ -34,7 +34,7 @@ add(in: containerView, fromStoryboard: "StoryboardName", withIdentifier: "Contro
 
 This method for adding a view controller with passed identifier as a child view controller but in `containerView` instead of `parent.view`.
 
-##### Also you can pass any parameters to child view controller.
+#### Also you can pass any parameters to child view controller.
 
 ```
 add(fromStoryboard: "StoryboardName", ViewControllerB.self) { moduleB in
@@ -54,7 +54,7 @@ add(in: containerView, fromStoryboard: "StoryboardName", withIdentifier: "Contro
 }
 ```
 
-##### You can push a controller.
+#### You can push a controller.
 
 ```
 show(fromStoryboard: "StoryboardName")
@@ -68,7 +68,7 @@ show(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifie
 
 This method for pushing a view controller with passed identifier.
 
-##### Also you can pass any parameters to controller which you gonna push.
+#### Also you can pass any parameters to controller which you gonna push.
 
 ```
 show(fromStoryboard: "StoryboardName", ViewControllerB.self) { moduleB in
@@ -80,7 +80,7 @@ show(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdentifie
 }
 ```
 
-##### You can present a controller.
+#### You can present a controller.
 
 ```
 present(fromStoryboard: "StoryboardName")
@@ -106,7 +106,7 @@ present(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdenti
 
 This method for adding a view controller with passed identifier and with custom `presentationStyle` and `transitionStyle`.
 
-##### Also you can pass any parameters to controller which you gonna present.
+#### Also you can pass any parameters to controller which you gonna present.
 
 ```
 present(fromStoryboard: "StoryboardName", ViewControllerB.self) { moduleB in
@@ -156,27 +156,27 @@ And it's so easy to use in the view controller.
 
 ```
 final class ViewControllerA: UIViewController, PostStoryRoutable {
-
-	@IBAction private func showPost() {
-	    guard let article = article else {
-	        return
-	    }
-	    
-	    showPostModule(with: article)
-	}
-
+    
+    @IBAction private func showPost() {
+        guard let article = article else {
+            return
+        }
+        
+        showPostModule(with: article)
+    }
+    
 }
 
 final class ViewControllerB: UIViewController, PostStoryRoutable {
-
-	@IBAction private func showPost() {
-	    guard let article = article else {
-	        return
-	    }
-	    
-	    showPostModule(with: article)
-	}
-
+    
+    @IBAction private func showPost() {
+        guard let article = article else {
+            return
+        }
+        
+        showPostModule(with: article)
+    }
+    
 }
 ```
 
