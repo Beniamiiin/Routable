@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => "MIT", :file => "LICENSE.md" }
   s.author           = { "Beniamin Sarkisyan" => "beniamin.sarkisyan@gmail.com" }
   s.requires_arc     = true
-  s.source           = { :git => "https://github.com/Beniamiiin/Routable.git", :branch => master }
+  s.source           = { :git => "https://github.com/Beniamiiin/Routable.git", :tag => s.version.to_s }
   s.source_files     = 'Sources/**/*.swift'
 
   s.ios.deployment_target = '8.0'
