@@ -1,12 +1,19 @@
 //
-//  Routable.swift
+//  BaseRoutable.swift
 //  Routable
 //
-//  Created by Beniamin Sarkisyan on 24/05/2018.
+//  Created by Beniamin Sarkisian on 24/05/2018.
 //  Copyright © 2018 bsarkisian.me. All rights reserved.
 //
 
-extension Routable where Self: UIViewController {
+import UIKit
+import Foundation
+
+public protocol BaseRoutable {
+    
+}
+
+extension BaseRoutable where Self: UIViewController {
     
     internal func show(fromStoryboard name: String, withIdentifier identifier: String?, transitionType: TransitionType, presentationStyle: UIModalPresentationStyle? = nil, transitionStyle: UIModalTransitionStyle? = nil) {
         _ = _show(fromStoryboard: name, withIdentifier: identifier, transitionType: transitionType, presentationStyle: presentationStyle, transitionStyle: transitionStyle)
@@ -79,3 +86,4 @@ extension Routable where Self: UIViewController {
     }
     
 }
+
