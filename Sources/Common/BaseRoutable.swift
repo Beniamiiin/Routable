@@ -36,6 +36,8 @@ extension BaseRoutable where Self: UIViewController {
         
         if let moduleInput = viewController as? T {
             configuration(moduleInput)
+        } else if let navigationController = viewController as? UINavigationController, let moduleInput = navigationController.topViewController as? T {
+            configuration(moduleInput)
         } else {
             fatalError("\(viewController) does not conform to protocol \(type)")
         }
