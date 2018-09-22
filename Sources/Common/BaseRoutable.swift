@@ -77,9 +77,9 @@ extension BaseRoutable where Self: UIViewController {
         switch transitionType {
         case .add:
             let containerView = view ?? self.view
-            addChildViewController(controller)
+            addChild(controller)
             containerView?.addSubview(controller.view)
-            controller.didMove(toParentViewController: self)
+            controller.didMove(toParent: self)
         case .show:
             show(controller, sender: nil)
         case .present:
