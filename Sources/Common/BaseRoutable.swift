@@ -79,6 +79,12 @@ extension BaseRoutable where Self: UIViewController {
             addChild(controller)
             containerView?.addSubview(controller.view)
             controller.didMove(toParent: self)
+        case .set:
+            guard let window = UIApplication.shared.keyWindow ?? UIApplication.shared.windows.first else {
+                fatalError("Window can't be nil")
+            }
+
+            window.rootViewController = controller
         case .show:
             show(controller, sender: nil)
         case .present:

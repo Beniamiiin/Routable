@@ -9,10 +9,10 @@ import UIKit
 
 public protocol SetRoutable: BaseRoutable {
     
-    func set(fromStoryboard name: String) -> UIViewController
-    func set(fromStoryboard name: String, withIdentifier identifier: String) -> UIViewController
+    func set(fromStoryboard name: String)
+    func set(fromStoryboard name: String, withIdentifier identifier: String)
     
-    func set<T>(fromStoryboard name: String, _ type: T.Type, configuration: @escaping (_ moduleInput: T) -> ()) -> UIViewController
-    func set<T>(fromStoryboard name: String, withIdentifier identifier: String, _ type: T.Type, configuration: @escaping (_ moduleInput: T) -> ()) -> UIViewController
+    func set<T>(fromStoryboard name: String, _ type: T.Type, configuration: @escaping (_ moduleInput: T) -> ())
+    func set<T>(fromStoryboard name: String, withIdentifier identifier: String, _ type: T.Type, configuration: @escaping (_ moduleInput: T) -> ())
     
 }
