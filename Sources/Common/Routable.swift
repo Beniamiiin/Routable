@@ -8,4 +8,4 @@
 
 import Foundation
 
-public typealias Routable = AddRoutable & ShowRoutable & PresentRoutable
+public typealias Routable = AddRoutable & SetRoutable & ShowRoutable & PresentRoutable
