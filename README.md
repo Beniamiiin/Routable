@@ -131,7 +131,7 @@ present(fromStoryboard: "StoryboardName", withIdentifier: "ControllerSegueIdenti
 Create routable protocols for user stories. For example:
 
 ```
-protocol PostStoryRoutable {
+protocol PostStoryRoutable: Routable {
     
     func showPostModule(with article: Article)
     
