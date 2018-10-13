@@ -10,6 +10,7 @@ import Foundation
 
 internal enum TransitionType {
     case add
+    case set
     case show
     case present
 }
