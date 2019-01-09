@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Routable"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Swift Lightweight Router"
   s.homepage         = "https://github.com/Beniamiiin/Routable"
   s.license          = { :type => "MIT", :file => "LICENSE" }
