@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol BaseRoutable {
+public protocol BaseRoutable: class {
     
 }
 
