@@ -2,8 +2,8 @@
 //  TransitionType.swift
 //  Routable
 //
-//  Created by Beniamin Sarkisian on 05/07/2018.
-//  Copyright © 2018 StickerPlace. All rights reserved.
+//  Created by Beniamin Sarkisian on 24/05/2018.
+//  Copyright © 2018 bsarkisian.me. All rights reserved.
 //
 
 import Foundation

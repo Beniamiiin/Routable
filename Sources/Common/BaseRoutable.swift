@@ -10,7 +10,31 @@ import UIKit
 
 public protocol BaseRoutable: class {
     
+    func dismissModule(animated: Bool)
 }
+
+// MARK: - Public functions
+
+public extension BaseRoutable where Self: UIViewController {
+    
+    func dismissModule(animated: Bool = true) {
+        if let parent = self.parent, parent is UINavigationController {
+            let navigationController = parent as! UINavigationController
+            
+            if navigationController.children.count > 1 {
+                guard let controller = navigationController.children.dropLast().last else { return }
+                navigationController.popToViewController(controller, animated: animated)
+            } else {
+                self.dismiss(animated: animated, completion: nil)
+            }
+        } else if self.presentingViewController != nil {
+            self.dismiss(animated: animated, completion: nil)
+        }
+    }
+    
+}
+
+// MARK: - Internal functions
 
 extension BaseRoutable where Self: UIViewController {
     
